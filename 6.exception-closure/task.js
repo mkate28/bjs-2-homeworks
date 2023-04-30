@@ -24,15 +24,15 @@ class Triangle {
     this.a = a;
     this.b = b;
     this.c = c;
-    if (((this.a + this.b) < this.c) || 
-       ((this.a + this.c) < this.b) || 
-       ((this.b + this.c) < this.a)) {
+    if ((this.a + this.b < this.c) ||
+       (this.a + this.c < this.b) || 
+       (this.b + this.c < this.a)) {
       throw new Error("Треугольник с такими сторонами не существует");
     }
   }
 
   get perimeter() {
-    return (this.a + this.b + this.c);
+    return this.a + this.b + this.c;
   }
 
   get area() {
