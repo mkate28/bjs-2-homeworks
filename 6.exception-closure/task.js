@@ -1,4 +1,4 @@
-﻿// task 1
+﻿// Задача №1
 
 function parseCount(count) {
   let parcedCount = parseFloat(count);
@@ -17,16 +17,14 @@ function validateCount(count) {
   }
 }
 
-// task 2
+// Задача №2
 
 class Triangle {
   constructor(a, b, c) {
     this.a = a;
     this.b = b;
     this.c = c;
-    if ((this.a + this.b < this.c) ||
-       (this.a + this.c < this.b) || 
-       (this.b + this.c < this.a)) {
+    if ((a + b < c) || (a + c < b) || (b + c < a)) {
       throw new Error("Треугольник с такими сторонами не существует");
     }
   }
